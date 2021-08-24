@@ -82,24 +82,22 @@
 {
    "topic": "productKey/deviceKey/downlink",
    "data_mapper": {
-      "$productKey": "product_column_name",
-      "$deviceKey": "device_column_name",
-      "$data.cpu": "cpu_column_name"
+      "$(productKey)": "product_column_name",
+      "$(deviceKey)": "device_column_name",
+      "cpu": "cpu_column_name"
    }
 }
 ```
 
 #### Data Mapping Config Support
 
-| Param         | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| $productKey   | string | Product Key           |
-| $deviceKey    | string | Device Key            |
-| $topic        | string | Device Publish Topic  |
-| $node         | string | Device Connect Node   |
-| $data.{param} | string | {param} Json Path Key |
-| $clientID     | string | MQTT ClientID         |
-| $username     | string | MQTT Username         |
+| Param         | Type   | Description          |
+| ------------- | ------ | -------------------- |
+| $(productKey) | string | Product Key          |
+| $(deviceKey)  | string | Device Key           |
+| $(topic)      | string | Device Publish Topic |
+| $(node)       | string | Device Connect Node  |
+| \*            | string | origin message       |
 
 Json Path uses [**github.com/tidwall/gjson**](https://github.com/tidwall/gjson) for validation. Check the full docs on tags usage [here](https://pkg.go.dev/github.com/tidwall/gjson@v1.7.4).
 
