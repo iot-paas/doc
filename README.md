@@ -53,9 +53,9 @@
    "database": "mongo",
    "table_name": "tbl_device",
    "data_mapper": {
-      "$productKey": "product_column_name",
-      "$deviceKey": "device_column_name",
-      "$data.cpu": "cpu_column_name"
+      "$(productKey)": "product_column_name",
+      "$(deviceKey)": "device_column_name",
+      "cpu": "cpu_column_name"
    }
 
 }
@@ -69,9 +69,9 @@
    "topic": "device.publish",
    "queue": "", //RabbitMQ May Use This Config
    "data_mapper": {
-      "$productKey": "product_column_name",
-      "$deviceKey": "device_column_name",
-      "$data.cpu": "cpu_column_name"
+      "$(productKey)": "product_column_name",
+      "$(deviceKey)": "device_column_name",
+      "cpu": "cpu_column_name"
    }
 }
 ```
