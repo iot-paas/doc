@@ -1,6 +1,6 @@
 # IoT PaaS
 
-![架构图](http://assets.processon.com/chart_image/60585319e0b34d780ef70ce4.png)
+![架构图](https://github.com/iot-paas/doc/blob/master/iot.png)
 
 ## Features
 
